@@ -8,10 +8,23 @@
         //- acima de 1500: aumento de 5 %
     
     //Entrada
-    
+    const precoProduto = Number(prompt(`Informe o preço do produto`));
+
     //Processamento
     
+    const aumentoVinte = precoProduto + (precoProduto * 20/100);
+    const aumentoQuinze = precoProduto + (precoProduto * 15/100);
+    const aumentoDez = precoProduto + (precoProduto * 10/100);
+    const aumentoCinco = precoProduto + (precoProduto * 5/100);
     
     //Saída
+
+    (precoProduto <= 280) ?
+    document.write(`O produto receberá um aumento de 20%, portanto sendo R$${aumentoVinte}`) :
+    (precoProduto > 280 && precoProduto <= 700) ?
+    document.write(`O produto receberá um aumento de 15%, portanto sendo R$${aumentoQuinze}`) :
+    (precoProduto > 700 && precoProduto <= 1500) ?
+    document.write(`O produto receberá um aumento de 10%, portanto sendo R$${aumentoDez}`) :
+    document.write(`O produto receberá um aumento de 5%, portanto sendo R$${aumentoCinco}`);
 
 </script>

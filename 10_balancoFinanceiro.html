@@ -10,19 +10,20 @@
     // Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
 
     //Entrada
-    const contaAgua = prompt(`Informe as despesas da conta de água`);
-    const contaEnergia = prompt(`Informe as despesas da conta de energia elétrica`);
-    const contaTel = prompt(`Informe as despesas da conta de telefone`);
-    const supermercado = prompt(`Informe as despesas do supermercado`);
-    const remuneracao = prompt(`Informe o valor da remuneração mensal`);
+    const contaAgua = Number(prompt(`Informe as despesas da conta de água`));
+    const contaEnergia = Number(prompt(`Informe as despesas da conta de energia elétrica`));
+    const contaTel = Number(prompt(`Informe as despesas da conta de telefone`));
+    const supermercado = Number(prompt(`Informe as despesas do supermercado`));
+    const remuneracao = Number(prompt(`Informe o valor da remuneração mensal`));
 
 
-    const gasto = contaAgua + contaEnergia + contaTel + supermercado
+    const gasto = contaAgua + contaEnergia + contaTel + supermercado;
 
-    const sobra = remuneracao - gasto
+    const sobra = remuneracao - gasto;
+    const falta = gasto - remuneracao;
     //Processamento
     (remuneracao<gasto) ?
-    alert(`Lhe falta ainda ${sobra} para poder pagar suas contas`) :
+    alert(`Lhe falta ainda ${falta} para poder pagar suas contas`) :
     alert(`Sobrou ${sobra} após o pagamento de suas contas`);
 
 
