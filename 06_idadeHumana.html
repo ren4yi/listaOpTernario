@@ -8,11 +8,20 @@
     // - cães grandes: fator 7.
 
     //Entrada
-   
+   const idade = Number(prompt(`Qual a idade do seu cão`));
+   const porte = Number(prompt(`Qual o porte do seu cão`));
 
     //Processamento
-
+const porteP = idade *5;
+const porteM = idade * 6;
+const porteG = idade * 7;
     
+(porte == "P") ?
+document.write(`A idade de seu cão como idade dos seres humanos é ${porteP}`) :
+(porte == "M") ?
+document.write(`A idade de seu cão como idade dos seres humanos é ${porteM}`) :
+document.write(`A idade de seu cão como idade dos seres humanos é ${porteG}`);
+
     //Saída
 
 </script>
